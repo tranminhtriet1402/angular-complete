@@ -2,6 +2,7 @@ import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '
 import { Ingredient } from 'src/app/shared/ingredient.model';
 import { ShoppingListService } from '../shoppinglist.service';
 
+
 @Component({
   selector: 'app-shopping-edit',
   templateUrl: './shopping-edit.component.html',
@@ -13,8 +14,6 @@ export class ShoppingEditComponent implements OnInit {
 
   @ViewChild('nameInput') nameInput!: ElementRef;
   @ViewChild('amountInput') amountInput!: ElementRef;
-  @Output() ingredientAdded = new EventEmitter<Ingredient>();
-  @Output() onClear = new EventEmitter<void>();
   ingredients!: Ingredient;
 
   ngOnInit(): void {
