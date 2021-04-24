@@ -1,0 +1,8 @@
+
+<div class="container">
+    <span>Bài tập biding</span> <br>
+    <label>Nhập username : </label><input type="text" [(ngModel)]="username" class="form-control">
+    <p>Output : {{username}}</p>
+    <button type="button" [disabled]="!username" (click)="cleartext()">Clear Text!!!!</button>
+</div>
+
